@@ -1,0 +1,57 @@
+{
+	"name": "modette/module-installer",
+	"description": "Module installer for Modette",
+	"type": "composer-plugin",
+	"license": "MPL-2.0",
+	"keywords": [
+		"composer",
+		"extension",
+		"installer",
+		"module"
+	],
+	"homepage": "https://github.com/modette/cmf",
+	"authors": [
+		{
+			"name": "Marek Bartoš",
+			"homepage": "https://marek-bartos.cz"
+		}
+	],
+	"require": {
+		"php": "^7.2.0",
+		"composer-plugin-api": "^1.0.0",
+		"modette/exceptions": "^1.0.0",
+		"nette/neon": "~3.0.0",
+		"nette/php-generator": "~3.2.0",
+		"nette/schema": "~1.0.0",
+		"nette/utils": "~3.0.0"
+	},
+	"require-dev": {
+		"composer/composer": "^1.7.0",
+		"phpstan/extension-installer": "^1.0.0",
+		"phpstan/phpstan": "^0.11.0",
+		"phpstan/phpstan-nette": "^0.11.0",
+		"phpstan/phpstan-strict-rules": "^0.11.0",
+		"phpunit/phpunit": "^8.2.3"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Modette\\ModuleInstaller\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Modette\\ModuleInstaller\\": "tests"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"extra": {
+		"class": "Modette\\ModuleInstaller\\Plugin",
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}
